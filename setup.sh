@@ -260,7 +260,7 @@ fi
 
 if [[  "$dev" = "true" ]]; then
     echo "==> installing platform requirements"
-    $CHECKOUT_DIR/platform/setup.sh --dck --dev
+    $CHECKOUT_DIR/platform/scripts/setup.sh --dck --dev
 fi
 
 #==================================
