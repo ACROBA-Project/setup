@@ -119,10 +119,12 @@ if [[ "$has_args" = "false" ]]; then
     # use default arguments 
     git=$_git
     pat=$_pat
+    dev=$_dev
     download=$_download 
 elif [[ "$skip" = "true" ]]; then 
     git=$( $git && echo false || echo $_git )
     pat=$( $pat && echo false || echo $_pat )
+    dev=$( $dev && echo false || echo $_dev )
     download=$( $download && echo false || echo $_download )
 fi 
 
@@ -142,7 +144,7 @@ if [[ "$git" = "true" ]]; then
     fi 
 fi
 if [[ "$dev" = "true" ]]; then
-    echo "- platform requirement installation"
+    echo "- platform requirements installation"
 fi
 if [[ "$cleanimages" = "true" ]]; then
     echo "- delete unused docker images"
